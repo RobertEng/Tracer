@@ -1,0 +1,23 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "Tracer",
+  "description": "Tracer thingy app make a descripOODLEStion later",
+  "version": "1.0.0",
+  
+  "content_scripts": [
+    {
+      "matches": ["http://stackoverflow.com/*","http://docs.oracle.com/*"],
+      "js": ["tracerScript.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+  	"default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "storage"
+  ]
+}
