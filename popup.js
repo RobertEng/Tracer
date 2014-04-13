@@ -29,11 +29,13 @@ document.getElementById("add-project").addEventListener('click',addProject());
 // }
 
 function addProject() {
-  alert("addProject called");
-  /*var currid = chrome.storage.sync.get("currid",function(){
-    alert("Hi");
-    alert("by job, i got it, it's "+currid);
-  });*/
+  console.log("addProject() called");
+
+  chrome.storage.sync.get("currid",function(resultCurr){
+    console.log("If i got this far, I'm good");
+    console.log("currId = " + resultCurr.currid);
+    //alert("by job, i got it, it's "+currid);
+  });
   var currid = chrome.storage.sync.get("currid");
   
   alert("oodles");
