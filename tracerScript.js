@@ -1,15 +1,28 @@
-alert("tracerScript.js called");
+//alert("tracerScript.js called");
+
 
 chrome.storage.sync.clear(function(){
-	alert("Now I deleted everything");
-});
+	//alert("Now I deleted everything");
 
+
+console.log("heyhehyehy I'm a fatty");
 var currIdReady = false;
 var projArrayReady = false;
-var currid = chrome.storage.sync.get("currid", function(){
-	if(currid == null){
+chrome.storage.sync.get("currid", function(result){
+	console.log("hehyehhehyhehy I like cheese");
+	console.log("currid = "+result.currid);
+	if(currid[0] == null){
+		console.log("Its lavendar not purple");
 		chrome.storage.sync.set({"currid":-1}, function(){
+		//chrome.storage.sync.set(currIdArray, function(){
+		console.log("Oodles of noodles");
+		console.log("ayy");
 			currIdReady = true;
+			alert("Hey");
+			chrome.storage.sync.get("currid", function(result){
+				alert(yoyo);
+				alert("You");
+			});
 			if(projArrayReady){
 				storeUrl();
 			}
@@ -21,6 +34,10 @@ var currid = chrome.storage.sync.get("currid", function(){
 		}
 	}
 });
+
+
+});
+
 
 var projArray = chrome.storage.sync.get("projArray", function(){
 	var singleProjArray = new Array();
@@ -42,7 +59,7 @@ var projArray = chrome.storage.sync.get("projArray", function(){
 
 function storeUrl(){
 	var currid = chrome.storage.sync.get("currid");
-	var projArray = chromestorage.sync.get("projArray");
+	var projArray = chrome.storage.sync.get("projArray");
 	alert("Flag 1");
 	if(currid != -1){
 		var d = new Date();
@@ -59,4 +76,4 @@ function storeUrl(){
 }
 //save the url, date, and time to the current project
 
-alert("tracerScript.js finished");
+//alert("tracerScript.js finished");

@@ -19,5 +19,7 @@
 
   "permissions": [
     "storage"
-  ]
+  ],
+
+  "options_page": "list.html"
 }

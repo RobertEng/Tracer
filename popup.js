@@ -1,3 +1,4 @@
+/*
 chrome.storage.sync.get("projArray", function(data){
   if(chrome.runtime.lastError){
     //No projArray in storage. Therefore, make new one.
@@ -6,11 +7,9 @@ chrome.storage.sync.get("projArray", function(data){
     return;
   }
 
-
-
 });
 
-
+*/
 
 document.getElementById("add-project").addEventListener('click',addProject());
 
@@ -30,6 +29,14 @@ document.getElementById("add-project").addEventListener('click',addProject());
 // }
 
 function addProject() {
+  alert("addProject called");
+  /*var currid = chrome.storage.sync.get("currid",function(){
+    alert("Hi");
+    alert("by job, i got it, it's "+currid);
+  });*/
+  var currid = chrome.storage.sync.get("currid");
+  
+  alert("oodles");
   var form = document.createElement("form");
   form.innerHTML = 'name: <input type="text" name="name">';
   useDiv = document.getElementById("orig-item");
