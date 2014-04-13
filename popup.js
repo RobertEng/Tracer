@@ -11,6 +11,7 @@ chrome.storage.sync.get("projArray", function(data){
 });
 
 
+
 document.getElementById("add_Project").addEventListener('click',addProject());
 
 
@@ -27,4 +28,19 @@ function addProject(){
   //add listener somewhere else which listens for a change in the chrome storage
 
 }
+
+  var projArray = [0, 1, 2, 3, 4];
+    for (var i = 0; i < projArray.length; i++) {
+      var item = document.createElement("tr");
+      item.innerHTML = '<td>'+'<a href="">'+projArray[i]+'</a>'+'</td>' + '<td>record</td>';
+      //var t = document.createTextNode('<td>'+projArray[i]+'</td>' + '<td>record</td>');
+      //item.appendChild(t);
+      useDiv = document.getElementById("orig-item");
+      useDiv.parentNode.insertBefore(item,useDiv);
+      
+    }
+
+    //var d = document.getElementByTagName('tbody');
+    var deleting = document.getElementById('orig-item');
+    d.removeChild(deleting);
 
