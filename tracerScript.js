@@ -32,9 +32,10 @@ chrome.storage.sync.get("currid", function(result){
 
 
 chrome.storage.sync.get("projArray", function(result){
-	var singleProjArray = new Array();
+	
 	console.log("New one here!");
 	if(result.projArray == null){
+		var singleProjArray = new Array();
 		console.log("result.projArray is null hmm");
 		chrome.storage.sync.set({"projArray":singleProjArray}, function(){
 			console.log("yoyoyoyo my name is joe");
