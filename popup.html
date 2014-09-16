@@ -2,43 +2,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tracer
-    </title>
-    <style>
-      body {
-        min-width: 357px;
-        overflow-x: hidden;
-        font-family: sans-serif;
+    <title>Tracer</title>
 
-      }
-
-      img {
-        margin: 5px;
-        border: 2px solid black;
-        vertical-align: middle;
-        width: 75px;
-        height: 75px;
-      }
-    </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
-     -->
-
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/popup.css" />
 
   </head>
   <body>
-<button id="add-project">Add project</button>
+    <div class="container">
+      <div id="header">
+        <img src="icon.png" alt="Tracer Image! yey" id="imageTracer" height="42" width="42">
+        <h1>TRACER</h1>
+      </div>
+      <div class="row">
+        <button id="add-project" class="btn btn-default">Add project</button>
+        <div id="itemAdd"></div>
+      </div>
+      <form id="radioForm"> <!-- for the radio buttons -->
+        <table id="tableMain" class="table">
+          <tbody id="main-list"></tbody>
+          <!--<tr id="orig-item"></tr>-->
+        </table>
+      </form>
+    </div>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popup.js"></script>
 
-<table id="main-list">
-<tr id="orig-item"></tr>
-
-</table>
-    <script src="popup.js"></script>
-
-</body>
+  </body>
 </html>
 

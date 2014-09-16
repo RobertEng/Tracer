@@ -2,13 +2,13 @@
   // Required
   "manifest_version": 2,
   "name": "Tracer",
-  "description": "Tracer thingy app make a descripOODLEStion later",
-  "version": "1.0.0",
+  "description": "Welcome to the Tracer extension! I'm intended for use during programming to record all the coding related websites and associate it with the project you're currently working on.",
+  "version": "1.0.2",
   
   "content_scripts": [
     {
-      "matches": ["http://stackoverflow.com/*","http://docs.oracle.com/*"],
-      "js": ["tracerScript.js"]
+      "matches": ["http://stackoverflow.com/*","http://docs.oracle.com/*","http://www.w3schools.com/*", "http://www.cprogramming.com/*", "https://docs.python.org/*", "http://www.tutorialspoint.com/*", "http://css-tricks.com/*", "https://github.com/*"],
+      "js": ["js/tracerScript.js", "js/jquery.min.js"]
     }
   ],
 

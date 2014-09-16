@@ -3,27 +3,13 @@
 <head>
 </head>
 <body>
-<ul>
-<script>
-    for (var i = 0; i < projArray.length; i++) {
-    	var projTitle = document.createElement("h2");
-    	projTitle.innerHTML = projArray[i].projName;
-		useDiv = document.getElementById("end");
-		useDiv.parentNode.insertBefore(item,useDiv);
-
-    	for (var j = 0; j < projArray.urlList.length; j++) {
-	     	var item = document.createElement("li");
-	      	item.innerHTML = JSON.stringify(projArray[i].urlList[i]);
-		    useDiv.parentNode.insertBefore(item,useDiv);
-    	}
 
 
-    }
+<table id="main-list">
 
-</script>
-<li id="end">
-</li>
-</ul>
+</table>
 
+<script src="js/jquery.min.js"></script>
+<script src="js/list.js"></script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+ body {
+  width: 400px;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+h1 {
+  display: inline-block;
+  margin: 0px;
+  vertical-align: bottom;
+}
+
+#imageTracer {
+  display: inline-block;
+}
+
+#header {
+  text-align: center;
+  left: 50%;
+  margin: 10px;
+}
+
+/*img {
+  margin: 5px;
+  border: 2px solid black;
+  vertical-align: middle;
+  width: 75px;
+  height: 75px;
+}*/
